@@ -4,6 +4,22 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 class Tests():
+    def test_1(self):
+        url = 'https://rahulshettyacademy.com/AutomationPractice/'
+        # Configuración de inicio de navegación de Google
+        option = webdriver.ChromeOptions()
+        option.add_experimental_option("excludeSwitches", ["enable-logging"])
+        # option.add_argument('--headless')
+        option.add_argument('disable-infobars')
+        option.add_argument('user-data-dir=C:\python27\profile')
+        option.add_argument("--start-maximized");
+
+        # Abrir navegador Chrome
+        driver = webdriver.Chrome(chrome_options=option)
+        # driver = webdriver.Chrome(executable_path = r 'C:\chromedriver_win32\chromedriver.exe', options = options)
+        driver.get(url)
+        time.sleep(3)
+
     def test_2(self):
         url = 'https://rahulshettyacademy.com/AutomationPractice/'
         # Configuración de inicio de navegación de Google
